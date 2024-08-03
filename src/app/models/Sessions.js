@@ -16,6 +16,7 @@ const sessionSchema = new mongoose.Schema({
     accountOwner: {type: String},
     locale: {type: String},
     collaborator: {type: Boolean},
+    onlineAccessInfo: {type: String},
     createdAt: {type: Date, default: Date.now()},
     updatedAt: {type: Date, default: Date.now()}
 });

@@ -9,7 +9,6 @@ const connectDB = async () => {
 
     const auth = dbUsername && dbPassword ? `${dbUsername}:${dbPassword}@` : '';
     const mongoUri = `${dbConnection}://${auth}${dbHost}:${dbPort}/${dbDatabase}`;
-    console.log(mongoUri);
     return mongoose.connect(mongoUri).then(() => {
         console.log('MongoDB connected successfully');
     }).catch(err => {
